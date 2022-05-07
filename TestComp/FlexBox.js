@@ -4,7 +4,7 @@ import {View} from 'react-native';
 function Box(props){
     return(
         <View style={{
-            width : 50
+            width : '40%'
             ,height : 50
             ,backgroundColor : props.color
             ,borderWidth: 1
@@ -36,6 +36,6 @@ export function VerticalLayout(props){
 }
 export function ULayout(props){
     return(
-        <Layout myStyle = {{flexDirection : 'row',rowCount : 2}}/>
+        <Layout myStyle = {{flexDirection : 'row',flexWrap : 'wrap',justifyContent:'space-around',alignContent:'space-around',height:'100%'}}/>
     );
 }
