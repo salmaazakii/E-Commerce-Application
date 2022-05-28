@@ -1,5 +1,5 @@
 import React from "react";
-import {Text, ActivityIndicator} from 'react-native';
+import {Text, ActivityIndicator,TouchableOpacity} from 'react-native';
 import { Styles } from "../styles";
 import { PlatformTouchable } from "./PlatformTouchable";
 
@@ -7,16 +7,20 @@ export class AppButton extends React.Component{
     render(){
         const {title,wrapperStyle,titleStyle,isLoading, ...rest} = this.props;
         return(
-            <PlatformTouchable 
+            <TouchableOpacity 
                 {...rest}
-                style={wrapperStyle}
+                style={[Styles.AppButton,wrapperStyle]}
                 disabled = {isLoading}
             >
                 { isLoading 
                 ? <ActivityIndicator></ActivityIndicator>
-                : <Text style={titleStyle}>{title}</Text>
+                : <Text style={[Styles.AppButtonText,titleStyle]}>{title}</Text>
                 }
-            </PlatformTouchable>
+            </TouchableOpacity>
+            // <PlatformTouchable 
+                
+            // >
+            // </PlatformTouchable>
         );
     }
 }

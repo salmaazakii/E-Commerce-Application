@@ -5,12 +5,12 @@ export const styles = StyleSheet.create({
         flexDirection : 'row'
         ,backgroundColor : '#EEEEEE'
         ,width: '40%'
-        ,height: 40
+        ,height: '7%'
         ,justifyContent: 'space-around'
         ,alignItems: 'center'
         ,borderRadius : 5
     },
-    symbolStyle :{
-        fontSize : 24
+    PlusMinus :{
+        padding : 10
     }
 });

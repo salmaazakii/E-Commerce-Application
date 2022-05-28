@@ -16,9 +16,9 @@ export default function AddToCartButton (props){
     const renderQuantityButton = () => {
         return(
             <View style={styles.QuantityButton}>
-                <Text style ={styles.symbolStyle} onPress={decrememtHandler}>-</Text>
+                <Text style ={styles.PlusMinus} onPress={decrememtHandler}>-</Text>
                 <Text>{quantity}</Text>
-                <Text style ={styles.symbolStyle} onPress={incrememtHandler}>+</Text>
+                <Text style ={styles.PlusMinus} onPress={incrememtHandler}>+</Text>
             </View>
         )
     }
