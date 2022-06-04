@@ -1,5 +1,7 @@
 import React,{useEffect} from 'react';
 import {View,TextInput,StyleSheet,Text,Dimensions} from 'react-native';
+// import { rem } from '../src/Utils/Constants';
+import {scale} from 'react-native-size-matters';
 
 const {width,height} = Dimensions.get('window');
 
@@ -13,6 +15,8 @@ function Input (props){
             , borderWidth : 1
             , marginBottom : 20
             , padding : 10
+            , height : scale(40)
+            , fontSize : scale(14)
         }
     });
     return (
@@ -33,9 +37,9 @@ export default function BasicForm (props){
 
     return ()=>{
         try{
-            Dimensions.removeEventListener('change');
+            Dimensions.remove('change');
         } catch (err){
-            console.error(JSON.stringify(err));
+            console.error('Can not remove event listener for the event "change".' & JSON.stringify(err));
         }
     };
 
@@ -55,7 +59,7 @@ export default function BasicForm (props){
                     <Input placeholder="Confirm password"/>
                 </View>
             </View>
-            <Text style={{color:'black'}}>Sign Up</Text>
+            <Text style={{color:'black',fontSize: scale(28),fontWeight : 'bold'}}>Sign Up</Text>
         </View>
     );
 }
