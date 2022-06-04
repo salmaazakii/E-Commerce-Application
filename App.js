@@ -8,20 +8,22 @@ import Counter from './TestComp/Counter';
 import AddToCartButton from './src/Components/AddToCart';
 import Timer from './src/Components/Timer';
 import {HorizontalLayout, ULayout, VerticalLayout} from './TestComp/FlexBox';
+import BasicForm from './TestComp/ResponsiveFormLayout';
 class App extends React.Component {
   render(){
     return (
-      <View style={Styles.Center} >
-        {/* <AppButton 
-          title='Done'
-          isLoading={false}
-          onPress={()=> Alert.alert('Hi')}>
-        </AppButton> */}
-        {/* <Counter /> */}
-        <AddToCartButton />
-        {/* <Timer maxSeconds = {100} countDown={true} onStopFunction={()=> Alert.alert("Time out!")}/> */}
-        {/* <ULayout /> */}
-      </View>
+      <BasicForm/>
+      // <View style={Styles.Center} >
+      //   {/* <AppButton 
+      //     title='Done'
+      //     isLoading={false}
+      //     onPress={()=> Alert.alert('Hi')}>
+      //   </AppButton> */}
+      //   {/* <Counter /> */}
+      //   {/* <AddToCartButton /> */}
+      //   {/* <Timer maxSeconds = {100} countDown={true} onStopFunction={()=> Alert.alert("Time out!")}/> */}
+      //   {/* <ULayout /> */}
+      // </View>
     );
   }
 };
