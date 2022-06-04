@@ -1,6 +1,6 @@
 import React from "react";
 import {Text} from 'react-native';
-import { formatTimer } from "../../Utils/functions";
+import { formatTimer } from "../../Utils/Functions";
 
 export default class Timer extends React.Component{
 
